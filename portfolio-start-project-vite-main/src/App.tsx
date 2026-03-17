@@ -1,19 +1,22 @@
-import './App.css'
-import styled from "styled-components";
+import {Header} from "./layout/header/Header.tsx";
+import {Main} from "./layout/sections/main/Main.tsx";
+import {Stacks} from "./layout/sections/stacks/Stacks.tsx";
+import {Projects} from "./layout/sections/projects/Projects.tsx";
+import {Feedback} from "./layout/sections/feedback/Feedback.tsx";
+import {Footer} from "./layout/footer/Footer.tsx";
 
 function App() {
     return (
         <div className="App">
-            <Title>It-Incubator</Title>
-            <img src="./assets/images/50353683%201.jpg" alt=""/>
+            <Header/>
+            <Main/>
+            <Stacks/>
+            <Projects/>
+            <Feedback/>
+            {/*<Footer/>*/}
         </div>
     )
 }
 
 export default App
 
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
-`;
