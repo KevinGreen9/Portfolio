@@ -19,6 +19,9 @@ export const Stack = (props:StackPropsType) => {
 };
 
 const StyledStack = styled.div`
-    //display: grid;
-    //grid-template-columns: repeat(auto-fit, minmax(100px, auto));;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `

@@ -22,6 +22,18 @@ export const GlobalStyled = createGlobalStyle`
     
     section{
         padding: 100px 0;
+
+        @media ${theme.media.tabletLarge}{
+            padding: 85px 0;
+        }
+        
+        @media ${theme.media.tablet} {
+            padding: 80px 0;
+        }
+
+        @media ${theme.media.mobile}{
+            padding: 60px 0;
+        }
     }
     
     a{

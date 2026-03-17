@@ -1,5 +1,7 @@
 import {Icon} from "../../../../componets/icon/Icon.tsx";
 import styled from "styled-components";
+import {font} from "../../../../styles/Common.tsx";
+import {theme} from "../../../../styles/Theme.tsx";
 
 
 type LinksPropsType = {
@@ -25,7 +27,7 @@ export const StyledLink = (props: LinksPropsType) => {
 };
 
 const Wrapper = styled.div`
-display: flex;
+    display: flex;
     gap: 10px;
 
     &:hover {
@@ -34,6 +36,10 @@ display: flex;
 
     &:active {
         transform: translateY(2px);
+    }
+
+    @media ${theme.media.mobile}{
+        gap: 5px;
     }
 `
 
@@ -44,9 +50,12 @@ const Link = styled.a`
     line-height: 1.625;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #fff;
+    color: ${theme.colors.linkFont};
     display: flex;
     align-items: center;
 
-   
+    @media ${theme.media.tablet} {
+        ${font({weight: 400, color: theme.colors.secondFont, lineHeight: 1.6, Fmax: 16, Fmin: 15})}
+    }
+
 `

@@ -12,7 +12,7 @@ function App() {
             <Main/>
             <Stacks/>
             <Projects/>
-            <Feedback/>
+            {/*<Feedback/>*/}
             {/*<Footer/>*/}
         </div>
     )

@@ -89,6 +89,7 @@ const PhotoWrapper = styled.div`
     }
     @media ${theme.media.mobile}{
         padding: 25px 0;
+        margin-top: 30px;
     }
 `
 

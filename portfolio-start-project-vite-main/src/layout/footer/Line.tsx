@@ -1,5 +1,6 @@
 import line from "../../assets/images/img/Divider.png"
 import styled from "styled-components";
+import {theme} from "../../styles/Theme.tsx";
 
 
 
@@ -16,6 +17,11 @@ import styled from "styled-components";
  display: flex;
  justify-content: center;
      padding: 45px 0;
+     
+     
+     @media ${theme.media.tabletLarge} {
+         display: none;
+     }
  `
 
 const LineStyled = styled.img`
