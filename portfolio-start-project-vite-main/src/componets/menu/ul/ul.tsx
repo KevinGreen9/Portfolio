@@ -33,11 +33,16 @@ const UlStyle = styled.ul`
     gap: 54px;
 
     @media ${theme.media.tabletLarge} {
-        gap: 25px
+        gap: 25px;
+
+        li:nth-child(3) a{
+            white-space: nowrap;
+        }
     }
 
     @media ${theme.media.mobile} {
         display: block;
+        
     }
 
 

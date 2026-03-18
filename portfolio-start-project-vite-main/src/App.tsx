@@ -12,8 +12,8 @@ function App() {
             <Main/>
             <Stacks/>
             <Projects/>
-            {/*<Feedback/>*/}
-            {/*<Footer/>*/}
+            <Feedback/>
+            <Footer/>
         </div>
     )
 }

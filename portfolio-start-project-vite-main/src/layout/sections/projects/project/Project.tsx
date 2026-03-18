@@ -57,7 +57,7 @@ const Title = styled.h3`
     padding: 25px 30px 0;
     text-align: left;
     
-    @media ${theme.media.tablet} {
+    @media ${theme.media.tabletLarge} {
         // ${font({weight: 500, color: theme.colors.secondFont, lineHeight: 0.9, Fmax: 28, Fmin:25})}
         padding: 20px 20px 0;
     }
@@ -72,7 +72,7 @@ const Text = styled.p`
     padding: 17px 30px 0;
     text-align: left;
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.tabletLarge} {
         ${font({weight: 300, color: theme.colors.secondFont, lineHeight: 1.4, Fmax: 18, Fmin:15})}
         padding: 15px 20px 0;
     }
@@ -93,7 +93,7 @@ const Stack = styled.span`
         font-size: 16px;
     }
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.tabletLarge} {
         ${font({weight: 400,color: theme.colors.secondFont, lineHeight: 1.6, Fmax: 16, Fmin:14})}
         padding: 10px 20px 0;
     }
@@ -106,7 +106,7 @@ const LinksWrapper = styled.div`
     justify-content: space-between;
     padding: 21px 30px 25px;
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.tabletLarge} {
         padding: 15px 20px 25px;
     }
     

@@ -20,4 +20,5 @@ export const Footer = () => {
 const FooterStyled= styled.footer`
     display: flex;
     flex-direction: column;
+    gap: 45px;
 `
