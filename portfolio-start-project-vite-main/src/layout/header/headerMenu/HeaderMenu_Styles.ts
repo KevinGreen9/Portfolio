@@ -1,33 +1,92 @@
+import {theme} from "../../../styles/Theme";
 import styled, {css} from "styled-components";
-import {Ul} from "../../../componets/menu/ul/ul.tsx";
-import {Ol} from "../../../componets/menu/ol/ol.tsx";
-import {theme} from "../../../styles/Theme.tsx";
 
+//Desktop menu
+const StyledMenu = styled.nav`
+    display: flex;
+    flex-direction: row;
+    gap: 51px;
 
-export const MobileMenu = () => {
-    return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
-            <MobileWrapperMobile isOpen={false}>
-                <Ul/>
-                <Ol/>
-            </MobileWrapperMobile>
-        </StyledMobileMenu>
-    )
-};
+    @media ${theme.media.tabletLarge} {
+        gap: 30px
+    }
+`
+//ul
+const Ul = styled.ul`
+    display: flex;
+    gap: 54px;
 
-const StyledMobileMenu = styled.nav`
-    display: none;
-    
-    
-    @media ${theme.media.tablet} {
+    @media ${theme.media.tabletLarge} {
+        gap: 25px;
+
+        li:nth-child(3) a{
+            white-space: nowrap;
+        }
+    }
+
+    @media ${theme.media.mobile} {
+        display: block;
+        
+    }
+`
+
+const UlLink = styled.a`
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: center;
+    color: ${theme.colors.firstFont};
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+        transform: translateY(-5px) scale(1.1);
+        filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    &:active {
+        transform: translateY(-2px) scale(1.05);
+        filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.1));
+    }
+}
+`
+//ol
+const Ol = styled.ol`
+    display: flex;
+    gap: 21px;
+
+    @media ${theme.media.tabletLarge} {
+        gap: 10px
+    }
+
+    @media ${theme.media.mobile} {
         display: block;
     }
-   
+`
 
-}
+const OlLink = styled.a`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+        transform: translateY(-5px) scale(1.1);
+        filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    &:active {
+        transform: translateY(-2px) scale(1.05);
+        filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.1));
+    }
+`
+
+//mobileMenu
+const MobileMenu = styled.nav`
+    
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -87,7 +146,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 
-const MobileWrapperMobile = styled.div<{ isOpen: boolean }>`
+const MobileWrapper = styled.div<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
     left: 0;
@@ -113,3 +172,16 @@ const MobileWrapperMobile = styled.div<{ isOpen: boolean }>`
     }
 
 `
+
+
+export const S = {
+    StyledMenu,
+    Ul,
+    UlLink,
+    Ol,
+    OlLink,
+    MobileMenu,
+    BurgerButton,
+    MobileWrapper,
+
+}

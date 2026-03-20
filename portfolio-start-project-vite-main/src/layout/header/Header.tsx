@@ -1,34 +1,31 @@
-import styled from "styled-components";
-import {Logo} from "../../componets/logo/Logo.tsx";
-import {Menu} from "../../componets/menu/Menu.tsx";
-import {Container} from "../../componets/Container.tsx";
-import {FlexWrapper} from "../../componets/FlexWrapper.tsx";
-import {theme} from "../../styles/Theme.tsx";
-import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+import {Logo} from "../../componets/logo/Logo";
+import {Menu} from "./headerMenu/menu/Menu";
+import {Container} from "../../componets/Container";
+import {FlexWrapper} from "../../componets/FlexWrapper";
+import {S} from "./Header_Styles"
+import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
+import React from "react";
 
-export const Header = () => {
+export const Header: React.FC = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <Menu/>
-                    <MobileMenu/>
+                    {width < breakpoint ?  <MobileMenu/> : <Menu/>}
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    background-color: ${theme.colors.primaryBg};
-    display: flex;
-    flex-direction: row;
-    padding-top: 41px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
-    
-`

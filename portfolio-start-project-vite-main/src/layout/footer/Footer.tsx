@@ -2,23 +2,19 @@ import {Contact} from "./contact/Contact.tsx";
 import {NavFooter} from "./navfooter/NavFooter.tsx";
 import {Line} from "./Line.tsx";
 import {Container} from "../../componets/Container.tsx";
-import styled from "styled-components";
+import {S} from "./Footer_Styles.ts"
+
 
 export const Footer = () => {
     return (
-        <FooterStyled>
+        <S.Footer>
             <Container>
                 <Contact/>
                 <Line/>
                 <NavFooter/>
             </Container>
-        </FooterStyled>
+        </S.Footer>
 
     );
 };
 
-const FooterStyled= styled.footer`
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-`

@@ -1,5 +1,5 @@
 import {Icon} from "../../../../componets/icon/Icon.tsx";
-import styled from "styled-components";
+import {S} from "../Stack_Styles.ts";
 
 type StackPropsType = {
     iconId: string
@@ -9,19 +9,12 @@ type StackPropsType = {
 
 export const Stack = (props:StackPropsType) => {
     return (
-        <StyledStack>
+        <S.Stack>
             <Icon iconId={props.iconId}
                   width={props.width || "50"}
                   height={props.height || "50"}>
             </Icon>
-        </StyledStack>
+        </S.Stack>
     );
 };
 
-const StyledStack = styled.div`
-    width: 130px;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
