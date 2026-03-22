@@ -6,7 +6,7 @@ import {font} from "../../../styles/Common.tsx";
 const Projects = styled.section`
     display: flex;
     flex-direction: column;
-
+position: relative;
 `
 
 const GridWrapper = styled.div`

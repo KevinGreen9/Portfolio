@@ -9,7 +9,10 @@ export const GlobalStyled = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-    
+
+    html {
+        scroll-behavior: smooth;
+    }
     body {
         margin: 0;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

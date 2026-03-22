@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
 
 
     return (
-        <S.Header>
+        <S.Header >
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>

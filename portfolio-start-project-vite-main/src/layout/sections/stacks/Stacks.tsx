@@ -2,6 +2,7 @@ import {S} from "./Stack_Styles.ts"
 import {SectionTitle} from "../../../componets/SectionTitle.tsx";
 import {Stack} from "./stack/Stack.tsx";
 import {Container} from "../../../componets/Container.tsx";
+import { Fade } from "react-awesome-reveal";
 
 const stackData = [
     {
@@ -69,18 +70,20 @@ const stackData = [
 
 export const Stacks = () => {
     return (
-        <S.StacksSkills>
+        <S.StacksSkills id={'stack'}>
             <Container>
                 <SectionTitle>
                     <h2> My Tech Stack</h2>
                     <h3> Technologies I’ve been working with recently</h3>
                 </SectionTitle>
                 <S.GridWrapper>
+                    <Fade cascade={true} >
                     {stackData.map((s, index) => {
                         return <Stack iconId={s.iconId} key={index}
                                         width= {String(s.width)}
                                         height={String(s.height)}/>
                     })}
+                    </Fade>
                 </S.GridWrapper>
             </Container>
         </S.StacksSkills>

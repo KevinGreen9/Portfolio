@@ -8,6 +8,7 @@ import img5 from "../../../../src/assets/images/img/imgFive.webp";
 import img6 from "../../../../src/assets/images/img/imgSix.webp";
 import {Container} from "../../../componets/Container.tsx";
 import {S} from "./Project_Styles.ts"
+import { Fade } from "react-awesome-reveal";
 
 const projectData = [
     {
@@ -50,19 +51,21 @@ const projectData = [
 
 export const Projects = () => {
     return (
-        <S.Projects>
+        <S.Projects id={'projects'}>
             <Container>
                 <SectionTitle>
                     <h2>Projects</h2>
                     <h3>Things I’ve built so far</h3>
                 </SectionTitle>
                 <S.GridWrapper>
+                    <Fade>
                     {projectData.map((p, index) => {
                         return <Project src={p.src} key={index}
                                         title={p.title}
                                         text={p.text}
                                         span={p.span}/>
                     })}
+                    </Fade>
                 </S.GridWrapper>
             </Container>
         </S.Projects>

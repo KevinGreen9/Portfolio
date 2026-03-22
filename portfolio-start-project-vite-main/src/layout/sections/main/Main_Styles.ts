@@ -7,6 +7,7 @@ import {font} from "../../../styles/Common.tsx";
 const Main = styled.section`
     min-height: 100vh;
     display: flex;
+    position: relative;
 
     @media ${theme.media.tabletLarge} {
         ${FlexWrapper} {
@@ -24,6 +25,17 @@ const Text = styled.p`
     letter-spacing: -0.02em;
     color: #d9d9d9;
     text-align: left;
+    
+    p {
+        display: none;
+    }
+
+    @media ${theme.media.tabletLarge}{
+        p {
+            display: block;  
+        }
+ 
+    }
 `
 
 const Name = styled.span`

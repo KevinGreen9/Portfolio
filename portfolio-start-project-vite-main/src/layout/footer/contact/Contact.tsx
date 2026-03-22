@@ -12,7 +12,7 @@ export const Contact = () => {
             </a>
             <S.ContactWrapper>
                 <S.Info> +91 12345 09876</S.Info>
-                <S.Mail>info@example.com</S.Mail>
+                <S.Mail href={'https://workspace.google.com/intl/ru/gmail/'} target="_blank" rel="noopener noreferrer">info@example.com</S.Mail>
                 <Ol/>
             </S.ContactWrapper>
         </FlexWrapper>

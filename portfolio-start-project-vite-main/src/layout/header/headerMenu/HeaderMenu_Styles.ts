@@ -46,10 +46,10 @@ const UlLink = styled.a`
         filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1));
     }
 
-    &:active {
-        transform: translateY(-2px) scale(1.05);
-        filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.1));
-    }
+    //&:active {
+    //    transform: translateY(-2px) scale(1.05);
+    //    filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.1));
+    //}
 }
 `
 //ol
@@ -62,7 +62,7 @@ const Ol = styled.ol`
     }
 
     @media ${theme.media.mobile} {
-        display: block;
+        //display: block;
     }
 `
 
@@ -157,6 +157,8 @@ const MobileWrapper = styled.div<{ isOpen: boolean }>`
     z-index: 99999;
     display: none;
     overflow: hidden;
+    transition: all 1s ease;
+    
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;

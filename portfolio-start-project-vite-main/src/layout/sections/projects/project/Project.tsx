@@ -20,8 +20,8 @@ export const Project = (props: ProjectPropsType) => {
                 {props.span}
             </S.Stack>
             <S.LinksWrapper>
-                <StyledLink iconId={"chain"} width={"20"} height={"20"} text={"Live Preview"}/>
-                <StyledLink iconId={"github-little"} width={"20"} height={"20"} text={"View Code"}/>
+                <StyledLink iconId={"chain"} width={"20"} height={"20"} text={"Live Preview"} href={'https://github.com/KevinGreen9/VoiceNest/blob/main/index.html'}/>
+                <StyledLink iconId={"github-little"} width={"20"} height={"20"} text={"View Code"} href={'https://github.com/KevinGreen9/VoiceNest'}/>
             </S.LinksWrapper>
         </S.Project>
     );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 //stacks
 const StacksSkills = styled.section`
-
+position: relative;
 `
 
 const GridWrapper = styled.div`

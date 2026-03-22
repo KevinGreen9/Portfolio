@@ -5,6 +5,7 @@ import styled from "styled-components";
 const FeedbackSection = styled.section`
     width: 100%;
     padding: 0;
+    position: relative;
 `
 
 const Feedback = styled.div`
